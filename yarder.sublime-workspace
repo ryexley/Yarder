@@ -19,7 +19,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 919,
+				"buffer_size": 1007,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +51,15 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 210,
+				"buffer_size": 297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "model/logMessage.js",
+			"settings":
+			{
+				"buffer_size": 247,
 				"line_ending": "Unix"
 			}
 		}
@@ -84,6 +92,7 @@
 	},
 	"file_history":
 	[
+		"/home/ryexley/Projects/yarder/modelSchema.js",
 		"/home/ryexley/Projects/yarder/README.md",
 		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/ryexley/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
@@ -157,15 +166,15 @@
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 919,
+						"buffer_size": 1007,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								250,
-								250
+								382,
+								382
 							]
 						],
 						"settings":
@@ -263,15 +272,41 @@
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 210,
+						"buffer_size": 297,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								210,
-								210
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "model/logMessage.js",
+					"settings":
+					{
+						"buffer_size": 247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
 							]
 						],
 						"settings":
@@ -293,7 +328,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"layout":
 	{

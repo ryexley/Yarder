@@ -2,6 +2,23 @@ doctype 5
 html
 	head
 		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		style
+			body { padding: 60px 0 0 0; }
+		link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		block page-stylesheets
 	body
-		block content
+		#navbar.navbar.navbar-fixed-top
+			.navbar-inner
+				.container-fluid
+					a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand(href="#") Yarder log viewer
+		.container-fluid
+			block content
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+		script(src='/javascripts/bootstrap.min.js')
+		block page-scripts

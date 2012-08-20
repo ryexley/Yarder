@@ -31,7 +31,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-
+app.get('/log/viewer', routes.logViewer);
 app.post('/log/write', routes.logWrite);
 
 http.createServer(app).listen(app.get('port'), function(){
