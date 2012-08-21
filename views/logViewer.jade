@@ -3,6 +3,15 @@ extends layout
 block content
 	h1= title
 block page-scripts
+	// view templates
+	script#sample-log-message-form-template(type='text/x-handlebars-template')
+		.modal-header
+			h2 Create a sample log message
+		.modal-body
+			sample log message form
+		.modal-footer
+			a#close.btn Close
+			a#save.btn.btn-primary Save
 	// third party scripts/libraries
 	script(src='/javascripts/lib/underscore-min.js')
 	script(src='/javascripts/lib/backbone-min.js')

@@ -6,6 +6,7 @@
 		},
 
 		home : function () {
+			new v.Menu();
 			console.log('Loading the default/home page');
 		}
 	});
