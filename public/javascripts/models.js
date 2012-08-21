@@ -1,0 +1,5 @@
+(function (m) {
+	
+	
+	
+}(Yarder.Models));

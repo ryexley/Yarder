@@ -1,0 +1,5 @@
+(function (v) {
+
+	
+
+}(Yarder.Views));

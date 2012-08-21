@@ -3,7 +3,16 @@ extends layout
 block content
 	h1= title
 block page-scripts
-	script(src='/javascripts/underscore-min.js')
-	script(src='/javascripts/backbone-min.js')
-	script(src='/javascripts/handlebars.js')
-	script(src='/javascripts/moment.js')
+	// third party scripts/libraries
+	script(src='/javascripts/lib/underscore-min.js')
+	script(src='/javascripts/lib/backbone-min.js')
+	script(src='/javascripts/lib/handlebars.js')
+	script(src='/javascripts/lib/moment.js')
+	// app-specific scripts
+	script(src='/javascripts/yarder.js')
+	script(src='/javascripts/routers.js')
+	script(src='/javascripts/views.js')
+	script(src='/javascripts/routers.js')
+	script(src='/javascripts/collections.js')
+	script(src='/javascripts/models.js')
+	script(src='/javascripts/start.js')
