@@ -6,6 +6,7 @@ html
 		style
 			body { padding: 60px 0 0 0; }
 		link(rel='stylesheet', href='/stylesheets/lib/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='/stylesheets/lib/font-awesome.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		block page-stylesheets
 	body
@@ -17,6 +18,10 @@ html
 						span.icon-bar
 						span.icon-bar
 					a.brand(href="#") Yarder log viewer
+					ul.nav.pull-right
+						li
+							a#sample-message-form(href='#', title='Create a new sample log message')
+								i.font-icon-asterisk
 		.container-fluid
 			block content
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
