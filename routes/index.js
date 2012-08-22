@@ -1,5 +1,20 @@
 var LogMessage = require('../model/logMessage.js');
 
+exports.options = function (req, res) {
+	var resources = [
+		{
+			name : 'writeLog',
+			url : '/log/write'
+		},
+		{
+			name : 'viewLog',
+			url : '/log/view'
+		}
+	];
+
+	res.send(resources);
+};
+
 exports.index = function (req, res) {
 	res.render('index', { title: 'Yarder. A node.js logging platform' });
 };

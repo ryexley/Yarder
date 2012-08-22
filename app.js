@@ -30,8 +30,9 @@ app.configure('development', function(){
     app.use(express.errorHandler());
 });
 
+app.options('/', routes.options);
 app.get('/', routes.index);
-app.get('/log/viewer', routes.logViewer);
+app.get('/log/view', routes.logViewer);
 app.post('/log/write', routes.logWrite);
 
 http.createServer(app).listen(app.get('port'), function(){
