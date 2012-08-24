@@ -1,4 +1,4 @@
-var LogMessage = require('../model/logMessage.js');
+var dp = require('../data/mongoLogMessageProvider'); // dp === data provider
 
 exports.options = function (req, res) {
 	var resources = [
@@ -24,17 +24,5 @@ exports.logViewer = function (req, res) {
 }
 
 exports.logWrite = function (req, res) {
-	var lm = new LogMessage({
-		application : req.body.application,
-		host : req.body.host,
-		context : req.body.context,
-		severity : req.body.severity,
-		clientTimestamp : req.body.clientTimestamp,
-		message : req.body.message,
-		payload : req.body.payload
-	});
-
-	lm.save();
-
-	res.send(lm);
+	res.send(dp.writeLogMessage(req.body));
 }

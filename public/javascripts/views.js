@@ -38,12 +38,14 @@
 			var content = this.template(this.model.toJSON());
 			this.$el
 				.html(content)
+				.fadeIn()
 				.modal()
 				.on('hidden', this.destroy);
 		},
 
 		save : function (e) {
 			e.preventDefault();
+			this.model.set('payload', JSON.parse(this.model.get('payload')));
 			console.log(this.model.toJSON());
 		},
 
@@ -85,6 +87,7 @@
 			try {
 				payload = JSON.parse($(e.currentTarget).val());
 			} catch (ex) {
+				console.log(ex);
 				payload = { 'content' : $(e.currentTarget).val() };
 			}
 

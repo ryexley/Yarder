@@ -3,39 +3,79 @@
 	{
 		"selected_items":
 		[
+			[
+				"get",
+				"getBrowserDetails"
+			],
+			[
+				"style",
+				"stylesheets"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "views/logViewer.jade",
 			"settings":
 			{
-				"buffer_size": 225,
+				"buffer_size": 1859,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app.js",
+			"file": "public/javascripts/yarder.js",
 			"settings":
 			{
-				"buffer_size": 1007,
+				"buffer_size": 149,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/index.jade",
+			"file": "public/javascripts/routers.js",
 			"settings":
 			{
-				"buffer_size": 177,
+				"buffer_size": 268,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/layout.jade",
+			"file": "public/javascripts/start.js",
 			"settings":
 			{
-				"buffer_size": 114,
+				"buffer_size": 110,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/models.js",
+			"settings":
+			{
+				"buffer_size": 726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/views.js",
+			"settings":
+			{
+				"buffer_size": 2254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/collections.js",
+			"settings":
+			{
+				"buffer_size": 43,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +83,7 @@
 			"file": "public/stylesheets/style.styl",
 			"settings":
 			{
-				"buffer_size": 98,
+				"buffer_size": 235,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +91,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 297,
+				"buffer_size": 796,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +99,23 @@
 			"file": "model/logMessage.js",
 			"settings":
 			{
-				"buffer_size": 247,
+				"buffer_size": 365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1080,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/api.js",
+			"settings":
+			{
+				"buffer_size": 54,
 				"line_ending": "Unix"
 			}
 		}
@@ -67,15 +123,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 138.0,
 		"selected_items":
 		[
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -92,6 +152,20 @@
 	},
 	"file_history":
 	[
+		"/home/ryexley/Projects/yarder/resources.js",
+		"/home/ryexley/Projects/yarder/public/javascripts/lib/json2.js",
+		"/home/ryexley/Projects/yarder/views/layout.jade",
+		"/home/ryexley/Projects/yarder/views/index.jade",
+		"/home/ryexley/Projects/yarder/app.js",
+		"/home/ryexley/Projects/yarder/package.json",
+		"/home/ryexley/Projects/yarder/public/stylesheets/lib/font-awesome.css",
+		"/home/ryexley/Projects/yarder/public/stylesheets/lib/bootstrap.min.css",
+		"/home/ryexley/Projects/yarder/public/javascripts/models",
+		"/home/ryexley/Projects/yarder/public/javascripts/backbone-min.js",
+		"/home/ryexley/Projects/yarder/public/javascripts/moment.js",
+		"/home/ryexley/Projects/yarder/public/javascripts/handlebars.js",
+		"/home/ryexley/Projects/yarder/public/javascripts/underscore-min.js",
+		"/home/ryexley/Projects/yarder/public/stylesheets/bootstrap.min.css",
 		"/home/ryexley/Projects/yarder/modelSchema.js",
 		"/home/ryexley/Projects/yarder/README.md",
 		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
@@ -113,6 +187,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"icon",
+			"img",
+			"Docr",
+			"img"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -130,30 +208,29 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
+					"file": "views/logViewer.jade",
 					"settings":
 					{
-						"buffer_size": 225,
+						"buffer_size": 1859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								225,
-								225
+								286,
+								286
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -163,18 +240,282 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app.js",
+					"file": "public/javascripts/yarder.js",
 					"settings":
 					{
-						"buffer_size": 1007,
+						"buffer_size": 149,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								382,
-								382
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/javascripts/routers.js",
+					"settings":
+					{
+						"buffer_size": 268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/javascripts/start.js",
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/javascripts/models.js",
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								726,
+								726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/javascripts/views.js",
+					"settings":
+					{
+						"buffer_size": 2254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1280,
+								1280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 192.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/javascripts/collections.js",
+					"settings":
+					{
+						"buffer_size": 43,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/stylesheets/style.styl",
+					"settings":
+					{
+						"buffer_size": 235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								796,
+								796
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "model/logMessage.js",
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								364,
+								364
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 1080,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								944,
+								944
 							]
 						],
 						"settings":
@@ -190,123 +531,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "views/index.jade",
+					"buffer": 12,
+					"file": "public/javascripts/api.js",
 					"settings":
 					{
-						"buffer_size": 177,
+						"buffer_size": 54,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								177,
-								177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "views/layout.jade",
-					"settings":
-					{
-						"buffer_size": 114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/stylesheets/style.styl",
-					"settings":
-					{
-						"buffer_size": 98,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								98,
-								98
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Stylus/Stylus.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "routes/index.js",
-					"settings":
-					{
-						"buffer_size": 297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								279,
-								279
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "model/logMessage.js",
-					"settings":
-					{
-						"buffer_size": 247,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								247
+								54,
+								54
 							]
 						],
 						"settings":
@@ -363,6 +600,42 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"logmes",
+				"model/logMessage.js"
+			],
+			[
+				"view",
+				"public/javascripts/views.js"
+			],
+			[
+				"sty",
+				"public/stylesheets/style.styl"
+			],
+			[
+				"logv",
+				"views/logViewer.jade"
+			],
+			[
+				"log",
+				"views/logViewer.jade"
+			],
+			[
+				"rout",
+				"public/javascripts/routers.js"
+			],
+			[
+				"yar",
+				"public/javascripts/yarder.js"
+			],
+			[
+				"layt",
+				"views/layout.jade"
+			],
+			[
+				"start",
+				"public/javascripts/start.js"
+			],
 			[
 				"index.js",
 				"routes/index.js"

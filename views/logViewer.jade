@@ -8,7 +8,7 @@ block page-scripts
 		.modal-header
 			h2 Create a sample log message
 		.modal-body
-			form.form-horizontal
+			form#sample-log-message-form.form-horizontal
 				.control-group
 					label.control-label(for="application") Application
 					.controls
@@ -36,7 +36,7 @@ block page-scripts
 				.control-group
 					label.control-label(for="payload") Payload
 					.controls
-						textarea#payload(value="{{payload}}")
+						textarea#payload {{payload}}
 		.modal-footer
 			a#close.btn Close
 			a#save.btn.btn-primary Save
