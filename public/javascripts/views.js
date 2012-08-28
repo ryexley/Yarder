@@ -1,4 +1,4 @@
-(function (m, v) {
+(function (api, m, v) {
 
 	v.Menu = Backbone.View.extend({
 		el : '#navbar',
@@ -45,8 +45,16 @@
 
 		save : function (e) {
 			e.preventDefault();
+			var view = this;
 			this.model.set('payload', JSON.parse(this.model.get('payload')));
-			console.log(this.model.toJSON());
+			$.ajax({
+				url : api.Resources.writeLog,
+				type : 'POST',
+				contentType : 'application/json; charset=UTF-8',
+				data : JSON.stringify(this.model)
+			}).done(function (results) {
+				view.$el.modal('hide');
+			});
 		},
 
 		close : function (e) {
@@ -95,4 +103,4 @@
 		}
 	});
 
-}(Yarder.Models, Yarder.Views));
+}(Yarder.Api, Yarder.Models, Yarder.Views));

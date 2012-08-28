@@ -4,7 +4,10 @@
 		Models : {},
 		Views : {},
 		Collections : {},
-		Routers : {}
+		Routers : {},
+		Api : {
+			Resources : {}
+		}
 	};
 
 	_.extend(w.Yarder, Backbone.Events);

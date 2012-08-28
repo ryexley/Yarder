@@ -1,6 +1,9 @@
-(function (yarder) {
+(function (yarder, api) {
 
-	new Yarder.Routers.Main();
-	Backbone.history.start({ pushState : true });
+	api.initialize();
+	yarder.on('yarder:api:initialized', function () {
+		new Yarder.Routers.Main();
+		Backbone.history.start({ pushState : true });
+	});
 
-}(Yarder));
+}(Yarder, Yarder.Api));
