@@ -20,6 +20,7 @@ exports.index = function (req, res) {
 };
 
 exports.logViewer = function (req, res) {
+	dp.getDefaultLogMessages();
 	res.render('logViewer', { title : 'Yarder log viewer' });
 }
 
