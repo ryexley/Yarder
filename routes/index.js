@@ -7,6 +7,10 @@ exports.options = function (req, res) {
 			url : '/log/write'
 		},
 		{
+			name : 'logMessages',
+			url : '/log/messages'
+		},
+		{
 			name : 'viewLog',
 			url : '/log/view'
 		}
@@ -20,7 +24,7 @@ exports.index = function (req, res) {
 };
 
 exports.logViewer = function (req, res) {
-	dp.getDefaultLogMessages();
+	// dp.getDefaultLogMessages();
 	res.render('logViewer', { title : 'Yarder log viewer' });
 }
 

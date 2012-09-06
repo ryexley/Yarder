@@ -6,11 +6,11 @@
 			type : 'OPTIONS'
 		}).done(function (resources) {
 			_.each(resources, function (resource) {
-				api.Resources[resource.name] = resource.url
+				api.Resources[resource.name] = resource.url;
 			});
 
 			yarder.trigger('yarder:api:initialized');
 		});
-	}
+	};
 
 }(Yarder, Yarder.Api));

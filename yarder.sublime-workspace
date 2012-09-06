@@ -19,7 +19,7 @@
 			"file": "views/logViewer.jade",
 			"settings":
 			{
-				"buffer_size": 1859,
+				"buffer_size": 1894,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,7 +27,7 @@
 			"file": "public/javascripts/yarder.js",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 182,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +43,7 @@
 			"file": "public/javascripts/start.js",
 			"settings":
 			{
-				"buffer_size": 110,
+				"buffer_size": 204,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,15 +59,15 @@
 			"file": "public/javascripts/views.js",
 			"settings":
 			{
-				"buffer_size": 2254,
+				"buffer_size": 2477,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+			"file": "data/mongoLogMessageProvider.js",
 			"settings":
 			{
-				"buffer_size": 389,
+				"buffer_size": 663,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +91,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 796,
+				"buffer_size": 663,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +115,7 @@
 			"file": "public/javascripts/api.js",
 			"settings":
 			{
-				"buffer_size": 54,
+				"buffer_size": 373,
 				"line_ending": "Unix"
 			}
 		}
@@ -139,7 +139,7 @@
 	},
 	"console":
 	{
-		"height": 132.0
+		"height": 198.0
 	},
 	"distraction_free":
 	{
@@ -152,6 +152,8 @@
 	},
 	"file_history":
 	[
+		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/ryexley/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/ryexley/Projects/yarder/resources.js",
 		"/home/ryexley/Projects/yarder/public/javascripts/lib/json2.js",
 		"/home/ryexley/Projects/yarder/views/layout.jade",
@@ -167,9 +169,7 @@
 		"/home/ryexley/Projects/yarder/public/javascripts/underscore-min.js",
 		"/home/ryexley/Projects/yarder/public/stylesheets/bootstrap.min.css",
 		"/home/ryexley/Projects/yarder/modelSchema.js",
-		"/home/ryexley/Projects/yarder/README.md",
-		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/ryexley/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
+		"/home/ryexley/Projects/yarder/README.md"
 	],
 	"find":
 	{
@@ -187,6 +187,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"req.body",
 			"icon",
 			"img",
 			"Docr",
@@ -208,7 +209,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -216,15 +217,15 @@
 					"file": "views/logViewer.jade",
 					"settings":
 					{
-						"buffer_size": 1859,
+						"buffer_size": 1894,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								1894,
+								1894
 							]
 						],
 						"settings":
@@ -243,20 +244,21 @@
 					"file": "public/javascripts/yarder.js",
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 182,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								149,
-								149
+								182,
+								182
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -276,8 +278,8 @@
 						"selection":
 						[
 							[
-								268,
-								268
+								0,
+								0
 							]
 						],
 						"settings":
@@ -295,15 +297,15 @@
 					"file": "public/javascripts/start.js",
 					"settings":
 					{
-						"buffer_size": 110,
+						"buffer_size": 204,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								110,
-								110
+								204,
+								204
 							]
 						],
 						"settings":
@@ -348,15 +350,15 @@
 					"file": "public/javascripts/views.js",
 					"settings":
 					{
-						"buffer_size": 2254,
+						"buffer_size": 2477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1280,
-								1280
+								1443,
+								1443
 							]
 						],
 						"settings":
@@ -365,30 +367,30 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 192.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+					"file": "data/mongoLogMessageProvider.js",
 					"settings":
 					{
-						"buffer_size": 389,
+						"buffer_size": 663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								124
+								240,
+								240
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -454,15 +456,15 @@
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 796,
+						"buffer_size": 663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								796,
-								796
+								663,
+								663
 							]
 						],
 						"settings":
@@ -535,20 +537,21 @@
 					"file": "public/javascripts/api.js",
 					"settings":
 					{
-						"buffer_size": 54,
+						"buffer_size": 373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								54,
-								54
+								162,
+								162
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -601,11 +604,31 @@
 		"selected_items":
 		[
 			[
+				"index",
+				"routes/index.js"
+			],
+			[
+				"rout",
+				"public/javascripts/routers.js"
+			],
+			[
 				"logmes",
 				"model/logMessage.js"
 			],
 			[
+				"mongo",
+				"data/mongoLogMessageProvider.js"
+			],
+			[
+				"mong",
+				"data/mongoLogMessageProvider.js"
+			],
+			[
 				"view",
+				"public/javascripts/views.js"
+			],
+			[
+				"views",
 				"public/javascripts/views.js"
 			],
 			[
@@ -619,10 +642,6 @@
 			[
 				"log",
 				"views/logViewer.jade"
-			],
-			[
-				"rout",
-				"public/javascripts/routers.js"
 			],
 			[
 				"yar",
