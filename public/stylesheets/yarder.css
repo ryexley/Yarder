@@ -1,0 +1,5 @@
+body{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Helvetica,Verdana,Sans-Serif}
+a{color:#00b7ff}
+h1,h2,h3{font-weight:normal}
+#sample-log-message-form input[type='text'],#sample-log-message-form textarea{width:300px}
+#sample-log-message-form textarea{height:150px}

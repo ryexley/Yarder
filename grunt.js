@@ -20,6 +20,25 @@ module.exports = function (grunt) {
 			]
 		},
 
+		stylus : {
+			compile : {
+				options : {
+					'include css' : true,
+					'paths' : [
+						'public/stylesheets',
+						'public/stylesheets/lib'
+					]
+				},
+				files : {
+					'public/stylesheets/yarder.css' : 'public/stylesheets/style.styl'
+				}
+			}
+		},
+
+		stylusWatchFiles : [
+			'public/stylesheets/style.styl'
+		],
+
 		jshint : {
 			options : {
 				curly : true,
@@ -72,9 +91,18 @@ module.exports = function (grunt) {
 				src : ['<banner>', 'public/javascripts/yarder.app.js'],
 				dest : 'public/javascripts/yarder.app.min.js'
 			}
+		},
+
+		watch : {
+			files : [
+				'<config:stylusWatchFiles>',
+				'<config:lint.files>'
+			],
+			tasks : 'default'
 		}
 	});
 
-	grunt.registerTask('default', 'lint concat min');
+	grunt.loadNpmTasks('grunt-stylus');
+	grunt.registerTask('default', 'lint stylus concat min');
 
 }

@@ -2278,7 +2278,7 @@ Handlebars.template = Handlebars.VM.template;
 
 }(Yarder.Collections));
 (function (m) {
-	
+
 	m.LogMessage = Backbone.Model.extend({
 		defaults : function () {
 			return {
