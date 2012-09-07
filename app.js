@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost/yarder');
 
 var app = express();
 
-app.configure(function(){
+app.configure(function () {
     app.set('port', process.env.PORT || devPort);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
@@ -35,6 +35,7 @@ app.options('/', routes.options);
 app.get('/', routes.index);
 app.get('/log/view', routes.logViewer);
 app.post('/log/write', routes.logWrite);
+app.get('/log/messages', routes.getDefaultLogMessages);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));

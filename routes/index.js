@@ -31,3 +31,19 @@ exports.logViewer = function (req, res) {
 exports.logWrite = function (req, res) {
 	res.send(dp.writeLogMessage(req.body));
 }
+
+exports.getDefaultLogMessages = function (req, res) {
+	var success = function (results) {
+		res.json(results);
+	};
+
+	var fail = function (err) {
+		res.json({
+			error : true,
+			message : 'Error fetching default log messages',
+			stack : err
+		});
+	};
+
+	dp.getDefaultLogMessages(success, fail);
+}

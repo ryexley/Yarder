@@ -1,12 +1,11 @@
 var LogMessage = require('../model/logMessage');
 
-var getDefaultLogMessages = function () {
+var getDefaultLogMessages = function (done, fail) {
 	LogMessage.find({}, function (err, results) {
 		if (!err) {
-			console.log(results);
-			return results;
+			done(results);
 		} else {
-			console.log(err);
+			fail(err);
 		}
 	});
 }
