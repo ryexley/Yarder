@@ -51,7 +51,7 @@
 			"file": "data/mongoLogMessageProvider.js",
 			"settings":
 			{
-				"buffer_size": 663,
+				"buffer_size": 652,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "public/javascripts/collections.js",
 			"settings":
 			{
-				"buffer_size": 43,
+				"buffer_size": 177,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,7 +67,15 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 663,
+				"buffer_size": 1398,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/LogController.js",
+			"settings":
+			{
+				"buffer_size": 311,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +91,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1103,
+				"buffer_size": 1340,
 				"line_ending": "Unix"
 			}
 		},
@@ -160,9 +168,10 @@
 	},
 	"file_history":
 	[
+		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/usr/share/applications/Instantbird.desktop",
 		"/home/ryexley/Projects/yarder/public/stylesheets/yarder.css",
 		"/home/ryexley/Projects/yarder/public/javascripts/yarder.js",
-		"/home/ryexley/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/ryexley/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/ryexley/Projects/yarder/resources.js",
 		"/home/ryexley/Projects/yarder/public/javascripts/lib/json2.js",
@@ -219,7 +228,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -234,8 +243,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								268,
+								268
 							]
 						],
 						"settings":
@@ -333,15 +342,15 @@
 					"file": "data/mongoLogMessageProvider.js",
 					"settings":
 					{
-						"buffer_size": 663,
+						"buffer_size": 652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								240,
-								240
+								523,
+								523
 							]
 						],
 						"settings":
@@ -360,15 +369,15 @@
 					"file": "public/javascripts/collections.js",
 					"settings":
 					{
-						"buffer_size": 43,
+						"buffer_size": 177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								177,
+								177
 							]
 						],
 						"settings":
@@ -386,15 +395,15 @@
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 663,
+						"buffer_size": 1398,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								663,
-								663
+								299,
+								299
 							]
 						],
 						"settings":
@@ -410,6 +419,33 @@
 				},
 				{
 					"buffer": 7,
+					"file": "controllers/LogController.js",
+					"settings":
+					{
+						"buffer_size": 311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "model/logMessage.js",
 					"settings":
 					{
@@ -435,19 +471,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "app.js",
 					"settings":
 					{
-						"buffer_size": 1103,
+						"buffer_size": 1340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								362,
-								362
+								377,
+								377
 							]
 						],
 						"settings":
@@ -457,13 +493,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 48.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "public/javascripts/api.js",
 					"settings":
 					{
@@ -474,8 +510,8 @@
 						"selection":
 						[
 							[
-								349,
-								349
+								375,
+								375
 							]
 						],
 						"settings":
@@ -490,7 +526,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "public/javascripts/yarder.js",
 					"settings":
 					{
@@ -523,7 +559,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "views/logViewer.jade",
 					"settings":
 					{
@@ -550,7 +586,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "public/stylesheets/style.styl",
 					"settings":
 					{
@@ -576,7 +612,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "grunt.js",
 					"settings":
 					{
@@ -587,16 +623,17 @@
 						"selection":
 						[
 							[
-								1278,
-								1278
+								867,
+								867
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 192.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

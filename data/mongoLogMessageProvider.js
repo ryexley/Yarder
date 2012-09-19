@@ -10,7 +10,7 @@ var getDefaultLogMessages = function (done, fail) {
 	});
 }
 
-var writeLogMessage = function (input) {
+var writeLogMessage = function (input, done, fail) {
 	var lm = new LogMessage({
 		application : input.application,
 		host : input.host,

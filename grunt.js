@@ -77,12 +77,27 @@ module.exports = function (grunt) {
 					'public/javascripts/yarder.js',
 					'public/javascripts/api.js',
 					'public/javascripts/routers.js',
+					'public/javascripts/templates.js',
 					'public/javascripts/views.js',
 					'public/javascripts/collections.js',
 					'public/javascripts/models.js',
 					'public/javascripts/start.js'
 				],
 				dest : 'public/javascripts/yarder.app.js'
+			}
+		},
+
+		handlebars : {
+			compile : {
+				options : {
+					namespace : 'Yarder.Templates',
+					processName : function (filename) {
+						return filename.replace(/^.*[\\\/]/, '').replace('.hb', '');
+					}
+				},
+				files : {
+					'public/javascripts/templates.js' : ['public/javascripts/templates/*.hb']
+				}
 			}
 		},
 
@@ -103,6 +118,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-stylus');
-	grunt.registerTask('default', 'lint stylus concat min');
+	grunt.loadNpmTasks('grunt-contrib-handlebars');
+	grunt.registerTask('default', 'lint stylus concat handlebars min');
 
 }
