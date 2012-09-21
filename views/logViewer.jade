@@ -1,45 +1,8 @@
 extends layout
 
 block content
-	h1= title
+	#viewer
 block page-scripts
-	// view templates
-	script#sample-log-message-form-template(type='text/x-handlebars-template')
-		.modal-header
-			h2 Create a sample log message
-		.modal-body
-			form#sample-log-message-form.form-horizontal
-				.control-group
-					label.control-label(for="application") Application
-					.controls
-						input#application(type="text", value="{{application}}")
-				.control-group
-					label.control-label(for="host") Host
-					.controls
-						input#host(type="text", value="{{host}}")
-				.control-group
-					label.control-label(for="context") Context
-					.controls
-						input#context(type="text", value="{{context}}")
-				.control-group
-					label.control-label(for="severity") Severity
-					.controls
-						input#severity(type="text", value="{{severity}}")
-				.control-group
-					label.control-label(for="clientTimestamp") Timestamp
-					.controls
-						input#clientTimestamp(type="text", value="{{clientTimestamp}}")
-				.control-group
-					label.control-label(for="message") Message
-					.controls
-						input#message(type="text", value="{{message}}")
-				.control-group
-					label.control-label(for="payload") Payload
-					.controls
-						textarea#payload {{payload}}
-		.modal-footer
-			a#close.btn Close
-			a#save.btn.btn-primary Save
 	// third party scripts/libraries
 	script(src='/javascripts/lib/underscore-min.js')
 	script(src='/javascripts/lib/backbone-min.js')
@@ -47,6 +10,7 @@ block page-scripts
 	script(src='/javascripts/lib/json2.js')
 	script(src='/javascripts/lib/moment.js')
 	// app-specific scripts
+	script(src='/javascripts/templates.js')
 	script(src='/javascripts/yarder.js')
 	script(src='/javascripts/api.js')
 	script(src='/javascripts/routers.js')

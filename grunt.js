@@ -87,16 +87,28 @@ module.exports = function (grunt) {
 			}
 		},
 
+		jade : {
+			templates : {
+				src : ['public/javascripts/templates/*.jade'],
+				dest : 'public/javascripts/templates',
+				options : {
+					client : false,
+					runtime : false
+				}
+			}
+		},
+
 		handlebars : {
 			compile : {
 				options : {
 					namespace : 'Yarder.Templates',
+					wrapped : true,
 					processName : function (filename) {
-						return filename.replace(/^.*[\\\/]/, '').replace('.hb', '');
+						return filename.replace(/^.*[\\\/]/, '').replace('.html', '');
 					}
 				},
 				files : {
-					'public/javascripts/templates.js' : ['public/javascripts/templates/*.hb']
+					'public/javascripts/templates.js' : ['public/javascripts/templates/*.html']
 				}
 			}
 		},
@@ -111,6 +123,7 @@ module.exports = function (grunt) {
 		watch : {
 			files : [
 				'<config:stylusWatchFiles>',
+				'<config:jade.templates.src>',
 				'<config:lint.files>'
 			],
 			tasks : 'default'
@@ -118,7 +131,9 @@ module.exports = function (grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-stylus');
+	grunt.loadNpmTasks('grunt-jade');
 	grunt.loadNpmTasks('grunt-contrib-handlebars');
-	grunt.registerTask('default', 'lint stylus concat handlebars min');
+
+	grunt.registerTask('default', 'lint stylus concat jade handlebars min');
 
 }

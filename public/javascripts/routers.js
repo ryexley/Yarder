@@ -7,7 +7,7 @@
 
 		home : function () {
 			new v.Menu();
-			console.log('Loading the default/home page');
+			new v.LogMessageListView({ collection : new c.LogMessageCollection() });
 		}
 	});
 

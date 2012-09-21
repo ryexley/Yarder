@@ -1,10 +1,13 @@
 (function (w) {
 
+	var templates = Yarder.Templates;
+
 	w.Yarder = {
 		Models : {},
 		Views : {},
 		Collections : {},
 		Routers : {},
+		Templates : templates,
 		Api : {
 			Resources : {}
 		}

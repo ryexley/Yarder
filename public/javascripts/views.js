@@ -15,7 +15,7 @@
 
 	v.SampleLogMessageForm = Backbone.View.extend({
 		className : 'modal',
-		template : Handlebars.compile($('#sample-log-message-form-template').html() || ''),
+		template : Yarder.Templates.NewSampleMessageDialog,
 
 		events : {
 			'change #application' : 'applicationChanged',
@@ -63,6 +63,7 @@
 		},
 
 		destroy : function () {
+			this.undelegateEvents();
 			this.remove();
 		},
 
@@ -100,6 +101,45 @@
 			}
 
 			this.model.set('payload', payload);
+		}
+	});
+
+	v.LogMessageListView = Backbone.View.extend({
+		tagName :  'ul',
+		attributes : {
+			id : 'log-message-list'
+		},
+
+		initialize : function () {
+			_.bindAll(this);
+			this.collection.bind('reset', this.render);
+			this.collection.fetch();
+		},
+
+		render : function () {
+			var self = this;
+
+			this.collection.each(function (logMessage) {
+				var item = new v.LogMessageItemView({ model : logMessage });
+				self.$el.append(item.render().el);
+			});
+
+			$('#viewer').html(this.$el);
+		}
+	});
+
+	v.LogMessageItemView = Backbone.View.extend({
+		className : 'log-message',
+		template : Yarder.Templates.LogMessageItemView,
+
+		initialize : function () {
+			_.bindAll(this);
+		},
+
+		render : function () {
+			var content = this.template(this.model.toJSON());
+			this.$el.html(content);
+			return this;
 		}
 	});
 
