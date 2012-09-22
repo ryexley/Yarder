@@ -2212,19 +2212,55 @@ this["Yarder"]["Templates"]["LogMessageItemView"] = Handlebars.template(function
   var buffer = "", stack1, foundHelper, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  buffer += "<li>";
+  buffer += "<div title=\"Client Timestamp: ";
+  foundHelper = helpers.clientTimestamp;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.clientTimestamp; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "\" class=\"field server-timestamp\">";
   foundHelper = helpers.serverTimestamp;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.serverTimestamp; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + " | ";
+  buffer += escapeExpression(stack1) + "</div><div title=\"";
+  foundHelper = helpers.application;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.application; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "\" class=\"field application\">";
+  foundHelper = helpers.application;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.application; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</div><div title=\"";
   foundHelper = helpers.severity;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.severity; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + " | ";
+  buffer += escapeExpression(stack1) + "\" class=\"field severity\">";
+  foundHelper = helpers.severity;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.severity; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</div><div title=\"";
+  foundHelper = helpers.host;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.host; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "\" class=\"field host\">";
+  foundHelper = helpers.host;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.host; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</div><div title=\"";
+  foundHelper = helpers.context;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.context; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "\" class=\"field context\">";
+  foundHelper = helpers.context;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.context; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</div><div title=\"";
   foundHelper = helpers.message;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.message; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</li>";
+  buffer += escapeExpression(stack1) + "\" class=\"field message\">";
+  foundHelper = helpers.message;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.message; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "</div>";
   return buffer;});
 (function (api, m, v) {
 
@@ -2282,6 +2318,7 @@ this["Yarder"]["Templates"]["LogMessageItemView"] = Handlebars.template(function
 				data : JSON.stringify(this.model)
 			}).done(function (results) {
 				view.$el.modal('hide');
+				Yarder.trigger('yarder:new-message', new m.LogMessage(results));
 			});
 		},
 
@@ -2340,7 +2377,8 @@ this["Yarder"]["Templates"]["LogMessageItemView"] = Handlebars.template(function
 
 		initialize : function () {
 			_.bindAll(this);
-			this.collection.bind('reset', this.render);
+			this.collection.on('reset', this.render);
+			this.collection.on('add', this.showNewMessage);
 			this.collection.fetch();
 		},
 
@@ -2348,16 +2386,26 @@ this["Yarder"]["Templates"]["LogMessageItemView"] = Handlebars.template(function
 			var self = this;
 
 			this.collection.each(function (logMessage) {
-				var item = new v.LogMessageItemView({ model : logMessage });
-				self.$el.append(item.render().el);
+				self.renderItem(logMessage);
 			});
 
 			$('#viewer').html(this.$el);
+		},
+
+		renderItem : function (item) {
+			var itemView = new v.LogMessageItemView({ model : item });
+			$(this.$el).prepend(itemView.render().el);
+		},
+
+		showNewmessage : function (newMessage) {
+			var newItemView = new v.LogMessageItemView({ model : newMessage });
+			$('#'+this.attributes.id).prependTo(newItemView.render().el);
 		}
 	});
 
 	v.LogMessageItemView = Backbone.View.extend({
-		className : 'log-message',
+		tagName : 'li',
+		className : 'log-message clearfix',
 		template : Yarder.Templates.LogMessageItemView,
 
 		initialize : function () {
@@ -2376,7 +2424,31 @@ this["Yarder"]["Templates"]["LogMessageItemView"] = Handlebars.template(function
 (function (c, api) {
 
 	c.LogMessageCollection = Backbone.Collection.extend({
-		url : function () { return api.Resources.logMessages; }
+		url : function () { return api.Resources.logMessages; },
+
+		initialize : function () {
+			Yarder.on('yarder:new-message', this.addMessage, this);
+		},
+
+		parse : function (raw) {
+			return _.map(raw, function (item) {
+				return {
+					id : item._id,
+					application : item.application,
+					clientTimestamp : moment(item.clientTimestamp).format('YYYY-MM-DD @ h:mm:ss a'),
+					context : item.context,
+					host : item.host,
+					message : item.message,
+					payload : item.payload,
+					serverTimestamp : moment(item.serverTimestamp).format('YYYY-MM-DD @ h:mm:ss a'),
+					severity : item.severity
+				};
+			});
+		},
+
+		addMessage : function (message) {
+			this.add(message);
+		}
 	});
 
 }(Yarder.Collections, Yarder.Api));

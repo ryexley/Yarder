@@ -13,15 +13,16 @@ html
 		#navbar.navbar.navbar-fixed-top
 			.navbar-inner
 				.container-fluid
-					a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+					a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
 						span.icon-bar
 						span.icon-bar
 						span.icon-bar
 					a.brand(href="#") Yarder log viewer
-					ul.nav.pull-right
-						li
-							a#sample-message-form(href='#', title='Create a new sample log message')
-								i.font-icon-asterisk
+					.nav-collapse
+						ul.nav.pull-right
+							li
+								a#sample-message-form(href='#', title='Create a new sample log message')
+									i.font-icon-asterisk
 		.container-fluid
 			block content
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')

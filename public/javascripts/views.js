@@ -54,6 +54,7 @@
 				data : JSON.stringify(this.model)
 			}).done(function (results) {
 				view.$el.modal('hide');
+				Yarder.trigger('yarder:new-message', new m.LogMessage(results));
 			});
 		},
 
@@ -112,7 +113,8 @@
 
 		initialize : function () {
 			_.bindAll(this);
-			this.collection.bind('reset', this.render);
+			this.collection.on('reset', this.render);
+			this.collection.on('add', this.showNewMessage);
 			this.collection.fetch();
 		},
 
@@ -120,16 +122,26 @@
 			var self = this;
 
 			this.collection.each(function (logMessage) {
-				var item = new v.LogMessageItemView({ model : logMessage });
-				self.$el.append(item.render().el);
+				self.renderItem(logMessage);
 			});
 
 			$('#viewer').html(this.$el);
+		},
+
+		renderItem : function (item) {
+			var itemView = new v.LogMessageItemView({ model : item });
+			$(this.$el).prepend(itemView.render().el);
+		},
+
+		showNewmessage : function (newMessage) {
+			var newItemView = new v.LogMessageItemView({ model : newMessage });
+			$('#'+this.attributes.id).prependTo(newItemView.render().el);
 		}
 	});
 
 	v.LogMessageItemView = Backbone.View.extend({
-		className : 'log-message',
+		tagName : 'li',
+		className : 'log-message clearfix',
 		template : Yarder.Templates.LogMessageItemView,
 
 		initialize : function () {
